@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Clothica Shop",
+      "description": "Clothica Shop is a modern online storefront designed to showcase clothing items in a clean and visually appealing layout. The site features a main page with highlighted popular products and intuitive navigation for exploring the full goods catalog. With a focus on simplicity and usability, it delivers a smooth shopping-browse experience entirely on the frontend.",
+      "tags": ["Next.JS", "Node.js", "TypeScript"],
+      "link": "https://github.com/AndriiButenko05/clothica-shop",
+      "live": "https://clothica-shop.vercel.app",
+      "icon": "/images/clothica.png",
+      "gradientColors": ["#6B6D42", "#4A5A6A"]
+    },
+    {
+      "id": 2,
+      "title": "Cozy Corner",
+      "description": "This is a full-stack online shop that allows users to browse a catalog of goods through a well-structured and responsive Goods page. It features secure user authentication with login and registration flows integrated with a backend. The site also connects the frontend to a server-side API, providing real-time data and a seamless shopping experience",
+      "tags": ["Next.JS", "TypeScript", "Node.js"],
+      "link": "https://github.com/AndriiButenko05/online-shop",
+      "live": "https://online-shop-chi-flame.vercel.app",
+      "icon": "/images/corner.png",
+      "gradientColors": ["#4A5A6A", "#D95D39"]
+    },
+    {
+      "id": 3,
+      "title": "A.R.I",
+      "description": "A.R.I. - Learn JavaScript is an interactive game designed to test and improve your JavaScript skills. It features a modern interface, smooth animations, and multiple coding levels where you can write and execute real code in the browser.",
+      "tags": ["Next.JS", "TypeScript", "Tailwind"],
+      "link": "https://github.com/netkatya/js-game",
+      "live": "https://js-game-seven-indol.vercel.app/",
+      "icon": "/images/ari.png",
+      "gradientColors": ["#D95D39", "#8B8D5A"]
+    },
+    {
+      "id": 4,
+      "title": "Movie Gallery",
+      "description": "A movie gallery website powered by TheMovieDB API. Built with Next.js, TypeScript, and React Query. Focused on adaptive design, and SEO-friendly metadata. Includes movie search with debounced input, genre-based filtering, pagination.",
+      "tags": ["Next.JS", "TypeScript", "CSS"],
+      "link": "https://github.com/AndriiButenko05/movie-gallery-project",
+      "live": "https://movie-gallery-project.vercel.app/",
+      "icon": "/images/gallery.png",
+      "gradientColors": ["#8B8D5A", "#6B6D42"]
+    },
+    {
+      "id": 5,
+      "title": "NoteHub",
+      "description": "Authentication system built with Next.js and TypeScript. Implements protected routes, user sign-in and sign-up flows, and session management. Responsible for backend-integrated login logic, custom middleware, and UI components for auth pages.",
+      "tags": ["React", "TypeScript", "CSS"],
+      "link": "https://github.com/AndriiButenko05/09-auth",
+      "live": "https://09-auth-seven-neon.vercel.app",
+        "icon": "/images/notehub.png",
+      "gradientColors": ["#4A5A6A", "#8B8D5A"]
+    },
+    {
+      "id": 6,
+      "title": "Booksy",
+      "description": "A book browsing platform utilizing HTML, SASS, and JavaScript. Designed with responsive layout and smooth transitions. Includes dynamic UI elements and modular code structure for scalability.",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/AndriiButenko05/project-js-06",
+         "live": "https://netkatya.github.io/project-js-06/",
+     "icon": "/images/booksy.png",
+      "gradientColors": ["#D95D39", "#4A5A6A"]
+    },
+    {
+      "id": 7,
+      "title": "Grosters Company",
+      "description": "A responsive website for Grosters company built with HTML, SASS, and JavaScript. Features include smooth animations, interactive modal windows, and a clean UI/UX approach. Emphasis on modern layout and user-friendly navigation.",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/AndriiButenko05/project-grosters",
+        "live": "https://grosters.com",
+      "icon": "/images/grosters.png",
+      "gradientColors": ["#6B6D42", "#D95D39"]
+    }
+  ]
+}
