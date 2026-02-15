@@ -11,7 +11,7 @@
 
 This is my personal portfolio website built with Next.js, featuring a bold modern design with a khaki green color scheme. The site showcases my journey as a Fullstack Developer, highlighting projects, skills, and professional experience.
 
-**Live Demo:** [Your deployed URL here]
+**Live Demo:** [https://andrii-butenko-portfolio.vercel.app]
 
 ## 👨‍💻 About Me
 
@@ -62,9 +62,9 @@ I'm a **Fullstack Developer** with a strong foundation in the JavaScript ecosyst
 portfolio-website/
 ├── app/
 │   ├── components/
-│   │   └── ProjectsSection.jsx    # Dynamic projects component
-│   ├── page.jsx                   # Main page component
-│   ├── layout.jsx                 # Root layout
+│   │   └── ProjectsSection.tsx    # Dynamic projects component
+│   ├── page.tsx                   # Main page component
+│   ├── layout.tsx                 # Root layout
 │   └── globals.css                # Global styles with animations
 ├── public/
 │   └── data/
@@ -159,51 +159,6 @@ yarn dev
 ```
 http://localhost:3000
 ```
-
-## 📝 Customization
-
-### Update Personal Information
-
-1. **Social Links** (`app/page.jsx`):
-```jsx
-// Update these URLs
-href="/path-to-your-cv.pdf"
-href="https://github.com/AndriiButenko05"
-href="https://linkedin.com/in/andrii-butenko-5190a6371"
-href="mailto:andrejbutik@gmail.com"
-```
-
-2. **Projects Data** (`public/data/projects.json`):
-```json
-{
-  "id": 1,
-  "title": "Your Project Name",
-  "description": "Project description...",
-  "tags": ["React", "TypeScript"],
-  "link": "https://github.com/yourusername/project",
-  "icon": "</>",
-  "gradientColors": ["#6B6D42", "#4A5A6A"]
-}
-```
-
-3. **About Section** (`app/page.jsx`):
-- Update bio text
-- Modify skills
-- Change education details
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Vercel will automatically detect Next.js and deploy
-4. Your site will be live at `your-project.vercel.app`
-
-### Other Platforms
-- **Netlify:** Follow Next.js deployment guide
-- **Railway:** Connect GitHub repo and deploy
-- **Custom Server:** Build with `npm run build` and serve
 
 ## 📧 Contact
 
