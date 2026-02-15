@@ -9,8 +9,6 @@
   --cream: #f5f4ee;
   --burnt-orange: #d95d39;
   --steel-blue: #4a5a6a;
-
-  /* Breakpoints */
   --mobile: 767px;
   --tablet: 1023px;
   --desktop: 1024px;
@@ -59,8 +57,91 @@ body::before {
   margin: 0 auto;
   padding: 0 2rem;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* ==================== NAVIGATION ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.project-card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.projects-grid .project-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.projects-grid .project-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.projects-grid .project-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.projects-grid .project-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.projects-grid .project-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.projects-grid .project-card:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.projects-grid .project-card:nth-child(n + 7) {
+  animation-delay: 0s;
+}
 .nav {
   position: fixed;
   top: 0;
@@ -123,8 +204,6 @@ body::before {
 .nav-menu a:hover::after {
   width: 100%;
 }
-
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .nav-container {
     padding: 1.5rem 3rem;
@@ -142,8 +221,6 @@ body::before {
     font-size: 0.95rem;
   }
 }
-
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .nav-container {
     padding: 1.2rem 1.5rem;
@@ -161,8 +238,6 @@ body::before {
     font-size: 0.85rem;
   }
 }
-
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .nav-container {
     padding: 1rem 1.5rem;
@@ -181,8 +256,6 @@ body::before {
     letter-spacing: 0.5px;
   }
 }
-
-/* ==================== HERO SECTION ==================== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -334,7 +407,6 @@ body::before {
   }
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .hero {
     padding-top: 100px;
@@ -358,8 +430,6 @@ body::before {
     padding: 1.2rem 2.5rem;
   }
 }
-
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero {
     padding-top: 80px;
@@ -385,7 +455,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .hero {
     padding-top: 80px;
@@ -420,7 +489,6 @@ body::before {
   }
 }
 
-/* ==================== SOCIAL LINKS SECTION ==================== */
 .social-links {
   padding: 6rem 2rem;
   background: var(--deep-black);
@@ -529,8 +597,6 @@ body::before {
   transform: translateX(10px);
   color: var(--burnt-orange);
 }
-
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .social-links {
     padding: 6rem 3rem;
@@ -564,7 +630,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .social-links {
     padding: 5rem 2rem;
@@ -604,7 +669,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .social-links {
     padding: 3rem 1.5rem;
@@ -648,7 +712,6 @@ body::before {
   }
 }
 
-/* ==================== PROJECTS SECTION ==================== */
 .projects {
   padding: 8rem 2rem;
   background: var(--warm-black);
@@ -831,7 +894,6 @@ body::before {
   transform: translateX(5px);
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .projects {
     padding: 8rem 3rem;
@@ -851,7 +913,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .projects {
     padding: 6rem 2rem;
@@ -876,7 +937,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .projects {
     padding: 4rem 1.5rem;
@@ -913,7 +973,6 @@ body::before {
   }
 }
 
-/* ==================== ABOUT SECTION ==================== */
 .about {
   padding: 8rem 2rem;
   background: var(--deep-black);
@@ -929,8 +988,8 @@ body::before {
 
 .about-image {
   width: 100%;
-  height: 600px; /* Keep your desired height */
-  object-fit: cover; /* This is key: it crops slightly to fill the space perfectly */
+  height: 600px;
+  object-fit: cover;
   object-position: center;
   background: linear-gradient(135deg, var(--khaki) 0%, var(--steel-blue) 100%);
   position: relative;
@@ -993,7 +1052,6 @@ body::before {
   color: var(--cream);
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .about {
     padding: 8rem 3rem;
@@ -1022,7 +1080,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .about {
     padding: 6rem 2rem;
@@ -1051,7 +1108,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .about {
     padding: 4rem 1.5rem;
@@ -1086,7 +1142,6 @@ body::before {
   }
 }
 
-/* ==================== BLOG SECTION ==================== */
 .blog {
   padding: 8rem 2rem;
   background: var(--warm-black);
@@ -1158,7 +1213,6 @@ body::before {
   text-transform: uppercase;
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .blog {
     padding: 8rem 3rem;
@@ -1174,7 +1228,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .blog {
     padding: 6rem 2rem;
@@ -1194,7 +1247,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .blog {
     padding: 4rem 1.5rem;
@@ -1218,7 +1270,6 @@ body::before {
   }
 }
 
-/* ==================== CONTACT SECTION ==================== */
 .contact {
   padding: 8rem 2rem;
   background: var(--deep-black);
@@ -1316,8 +1367,8 @@ body::before {
 }
 
 .submit-btn:hover::before {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .submit-btn span {
@@ -1325,7 +1376,6 @@ body::before {
   z-index: 1;
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .contact {
     padding: 8rem 3rem;
@@ -1344,7 +1394,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .contact {
     padding: 6rem 2rem;
@@ -1363,7 +1412,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .contact {
     padding: 4rem 1.5rem;
@@ -1397,7 +1445,6 @@ body::before {
   }
 }
 
-/* ==================== FOOTER ==================== */
 .footer {
   background: var(--warm-black);
   padding: 4rem 2rem 2rem;
@@ -1458,7 +1505,6 @@ body::before {
   font-size: 0.9rem;
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .footer {
     padding: 4rem 3rem 2rem;
@@ -1470,7 +1516,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer {
     padding: 3rem 2rem 2rem;
@@ -1486,7 +1531,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .footer {
     padding: 3rem 1.5rem 2rem;
@@ -1513,7 +1557,7 @@ body::before {
     font-size: 0.85rem;
   }
 }
-/* ==================== LOAD MORE BUTTON ==================== */
+
 .load-more-container {
   max-width: 1400px;
   margin: 4rem auto 0;
@@ -1570,7 +1614,6 @@ body::before {
   transform: scale(0.98);
 }
 
-/* Loading State */
 .loading-state {
   max-width: 1400px;
   margin: 0 auto;
@@ -1582,7 +1625,6 @@ body::before {
   letter-spacing: 2px;
 }
 
-/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .load-more-container {
     margin: 4rem auto 0;
@@ -1594,7 +1636,6 @@ body::before {
   }
 }
 
-/* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .load-more-container {
     margin: 3rem auto 0;
@@ -1606,7 +1647,6 @@ body::before {
   }
 }
 
-/* Mobile (max 767px) */
 @media (max-width: 767px) {
   .load-more-container {
     margin: 2.5rem auto 0;
