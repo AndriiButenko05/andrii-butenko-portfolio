@@ -1,0 +1,47 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "role": "Frontend Developer",
+      "company": "Emdula",
+      "period": "January 2026 – Present",
+      "context": "Multi-module CRM platform for business clients (pre-release)",
+      "achievements": [
+        "Cut the main production bundle from 685 KB to 341 KB gzipped by converting 35 page routes to React.lazy + Suspense code splitting, improving first-paint on login.",
+        "Restructured a 149-component codebase into domain-based architecture via atomic per-domain PRs, reducing root-level files from ~120 to 21 and documenting the convention.",
+        "Hardened EN/UK localization: migrated hard-coded strings to i18next, fixed language persistence across signup/onboarding, and added a CI check that fails builds on non-localized strings.",
+        "Eliminated all react-hooks/exhaustive-deps violations (fixing real stale-closure bugs) and promoted the rule to error, blocking a recurring bug class from new PRs.",
+        "Resolved 20+ production defects across Deals, Properties, and Profile modules — including timezone conversion, modal navigation, and data-categorization bugs — verified against QA repro steps."
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Full-Stack Developer Intern",
+      "company": "ZenBit",
+      "period": "March 2026 – May 2026",
+      "context": "Patient data de-identification platform for healthcare providers (under NDA)",
+      "achievements": [
+        "Implemented passwordless magic-link authentication end-to-end (React + Nest.js), including verification emails, link expiry, and automatic session termination after 2h of inactivity to protect patient-facing accounts.",
+        "Built the 4-step patient-data de-identification flow from Figma designs — form handling, step navigation, and responsive layouts across desktop and tablet.",
+        "Developed the main dashboard with information-card overview per the new design system.",
+        "Implemented session-expired and link-expired states with responsive layouts, covering inactivity timeouts and invalid-session recovery.",
+        "Shipped through two client demo cycles, iterating on auth, sidebar, and email templates from stakeholder feedback."
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Freelance Frontend Developer",
+      "company": "Grosters Company",
+      "companyLink": "https://grosters.com",
+      "period": "May 2025 – October 2025",
+      "context": "4-page commercial website delivered solo, from client requirements to production launch",
+      "achievements": [
+        "Designed and shipped a 4-page commercial website solo, from client requirements to production deployment — achieving Lighthouse scores of 99 Performance / 100 Best Practices / 91 Accessibility.",
+        "Built a mobile-first layout across 3 breakpoints with consistent rendering on iOS Safari, Chrome, Firefox, and Edge.",
+        "Engineered modular UI sections and interactive modals in vanilla JavaScript — no framework, keeping the bundle minimal and load times near-instant on mobile networks.",
+        "Structured semantic HTML5 and BEM-style CSS architecture, making content updates straightforward for the client post-handoff.",
+        "Managed the client relationship end-to-end: requirements, revision cycles, scope, and final delivery on the agreed timeline."
+      ]
+    }
+  ]
+}

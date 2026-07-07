@@ -8,6 +8,7 @@
       "link": "https://github.com/AndriiButenko05/clothica-shop",
       "live": "https://clothica-shop.vercel.app",
       "icon": "/images/clothica.png",
+      "alt": "Screenshot of the Clothica Shop online storefront homepage",
       "gradientColors": ["#6B6D42", "#4A5A6A"]
     },
     {
@@ -18,6 +19,7 @@
       "link": "https://github.com/AndriiButenko05/online-shop",
       "live": "https://online-shop-chi-flame.vercel.app",
       "icon": "/images/corner.png",
+      "alt": "Screenshot of the Cozy Corner online shop goods catalog page",
       "gradientColors": ["#4A5A6A", "#D95D39"]
     },
     {
@@ -28,6 +30,7 @@
       "link": "https://github.com/netkatya/js-game",
       "live": "https://js-game-seven-indol.vercel.app/",
       "icon": "/images/ari.png",
+      "alt": "Screenshot of the A.R.I. interactive JavaScript learning game",
       "gradientColors": ["#D95D39", "#8B8D5A"]
     },
     {
@@ -38,6 +41,7 @@
       "link": "https://github.com/AndriiButenko05/movie-gallery-project",
       "live": "https://movie-gallery-project.vercel.app/",
       "icon": "/images/gallery.png",
+      "alt": "Screenshot of the Movie Gallery search and browsing interface",
       "gradientColors": ["#8B8D5A", "#6B6D42"]
     },
     {
@@ -47,7 +51,8 @@
       "tags": ["React", "TypeScript", "CSS"],
       "link": "https://github.com/AndriiButenko05/09-auth",
       "live": "https://09-auth-seven-neon.vercel.app",
-        "icon": "/images/notehub.png",
+      "icon": "/images/notehub.png",
+      "alt": "Screenshot of the NoteHub sign-in and authentication page",
       "gradientColors": ["#4A5A6A", "#8B8D5A"]
     },
     {
@@ -56,19 +61,10 @@
       "description": "A book browsing platform utilizing HTML, SASS, and JavaScript. Designed with responsive layout and smooth transitions. Includes dynamic UI elements and modular code structure for scalability.",
       "tags": ["HTML", "CSS", "JavaScript"],
       "link": "https://github.com/AndriiButenko05/project-js-06",
-         "live": "https://netkatya.github.io/project-js-06/",
-     "icon": "/images/booksy.png",
+      "live": "https://netkatya.github.io/project-js-06/",
+      "icon": "/images/booksy.png",
+      "alt": "Screenshot of the Booksy book browsing platform",
       "gradientColors": ["#D95D39", "#4A5A6A"]
-    },
-    {
-      "id": 7,
-      "title": "Grosters Company",
-      "description": "A responsive website for Grosters company built with HTML, SASS, and JavaScript. Features include smooth animations, interactive modal windows, and a clean UI/UX approach. Emphasis on modern layout and user-friendly navigation.",
-      "tags": ["HTML", "CSS", "JavaScript"],
-      "link": "https://github.com/AndriiButenko05/project-grosters",
-        "live": "https://grosters.com",
-      "icon": "/images/grosters.png",
-      "gradientColors": ["#6B6D42", "#D95D39"]
     }
   ]
 }

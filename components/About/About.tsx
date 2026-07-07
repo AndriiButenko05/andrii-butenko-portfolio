@@ -1,5 +1,10 @@
 import css from "@/app/page.module.css";
 import Image from "next/image";
+import skillsData from "@/public/data/skills.json";
+import { SkillGroup } from "@/types/skills";
+
+const skillGroups = skillsData.skills as SkillGroup[];
+
 export default function About() {
   return (
     <section className={css.about} id="about">
@@ -10,42 +15,32 @@ export default function About() {
           height={600}
           width={431}
           className={css["about-image"]}
+          priority
         />
 
         <div className={css["about-content"]}>
           <h2>
-            Fullstack <span className={css.highlight}>Developer</span>
+            Frontend <span className={css.highlight}>Developer</span>
           </h2>
           <p>
-            I am a Fullstack Developer based in Wroclaw. Currently pursuing a
-            degree in Cloud Application Development at WSB Merito University, I
-            combine strong academic foundations with practical skills gained
-            through intensive bootcamp training and real-world projects.
+            I&apos;m a Frontend Developer based in Wrocław, with a B.Sc. in
+            Cloud Application Development from WSB Merito University (2026). I
+            combine that foundation with hands-on experience shipping
+            production features across CRM and healthcare platforms.
           </p>
           <p>
-            My focus is on building scalable web applications using the MERN
-            stack and Next.js. I am passionate about writing clean code, solving
-            complex problems, and constantly learning new technologies to
-            deliver seamless user experiences.
+            My focus is building performant, accessible interfaces with React,
+            TypeScript, and Next.js — with enough backend fluency in Node.js
+            and Nest.js to own a feature end-to-end, from UI to API.
           </p>
 
           <div className={css.skills}>
-            <div className={css["skill-item"]}>
-              <h4>Frontend</h4>
-              <p>React, Javascript/TypeScript, Next.js, Tailwind CSS</p>
-            </div>
-            <div className={css["skill-item"]}>
-              <h4>Backend</h4>
-              <p>Node.js, Express, REST API</p>
-            </div>
-            <div className={css["skill-item"]}>
-              <h4>Database</h4>
-              <p>MongoDB, Mongoose</p>
-            </div>
-            <div className={css["skill-item"]}>
-              <h4>Tools</h4>
-              <p>Git, Figma, Postman, Windows, Agile/Scrum</p>
-            </div>
+            {skillGroups.map((group) => (
+              <div key={group.id} className={css["skill-item"]}>
+                <h4>{group.label}</h4>
+                <p>{group.items.join(", ")}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,0 +1,38 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "label": "Core",
+      "items": [
+        "JavaScript/TypeScript",
+        "React",
+        "Next.js (SSR, SSG)",
+        "HTML5/CSS/SASS",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "State & Data",
+      "items": ["Redux", "Zustand", "React Query", "REST API"]
+    },
+    {
+      "id": 3,
+      "label": "Backend Exposure",
+      "items": ["Node.js", "Express.js", "Nest.js", "MongoDB"]
+    },
+    {
+      "id": 4,
+      "label": "Tools",
+      "items": [
+        "Git",
+        "Vite",
+        "i18next",
+        "MUI",
+        "Figma",
+        "Jira / GitHub PRs",
+        "ESLint"
+      ]
+    }
+  ]
+}

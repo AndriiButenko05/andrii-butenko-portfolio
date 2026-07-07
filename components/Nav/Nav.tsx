@@ -7,10 +7,13 @@ export default function Nav() {
         <div className={css.logo}>&lt;AB /&gt;</div>
         <ul className={css["nav-menu"]}>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
           </li>
           <li>
             <a href="#contact">Contact</a>

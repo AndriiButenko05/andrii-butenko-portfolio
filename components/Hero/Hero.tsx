@@ -4,15 +4,16 @@ export default function Hero() {
     <section className={css.hero}>
       <div className={css.container}>
         <div className={css["hero-content"]}>
-          <div className={css["hero-label"]}>FullStack Developer</div>
+          <div className={css["hero-label"]}>Frontend Developer</div>
           <h1>
-            Building Modern
-            <span className={css.highlight}>Web Applications</span>
+            Building Fast,
+            <span className={css.highlight}>Accessible Interfaces</span>
           </h1>
           <p>
-            Specialized in the JavaScript ecosystem (React, Next.js, Node.js).
-            Combining academic foundations in Cloud Development with practical
-            coding skills.
+            Frontend developer specializing in React, TypeScript, and
+            Next.js — with commercial experience across a multi-module CRM
+            platform, a HIPAA-compliant healthcare app, and a client site
+            delivered solo from requirements to launch.
           </p>
           <div className={css["cta-group"]}>
             <a href="#projects" className={`${css.btn} ${css["btn-primary"]}`}>

@@ -1,0 +1,8 @@
+{
+  "languages": [
+    { "id": 1, "name": "English", "level": "Upper-intermediate" },
+    { "id": 2, "name": "Polish", "level": "Intermediate" },
+    { "id": 3, "name": "Ukrainian", "level": "Native" },
+    { "id": 4, "name": "Russian", "level": "Fluent" }
+  ]
+}

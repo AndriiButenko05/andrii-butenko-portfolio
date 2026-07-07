@@ -9,18 +9,21 @@ export default function Footer() {
         <div className={css["footer-brand"]}>
           <h3>&lt;AB /&gt;</h3>
           <p>
-            Crafting scalable web applications with React, Next.js, and Node.js.
-            Focused on performance, clean code, and cloud technologies.
+            Crafting fast, accessible interfaces with React, TypeScript, and
+            Next.js. Focused on performance, clean code, and user experience.
           </p>
         </div>
         <div className={css["footer-links"]}>
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

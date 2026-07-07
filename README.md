@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Andrii Butenko — Portfolio
+
+Live: [andrii-butenko-portfolio.vercel.app](https://andrii-butenko-portfolio.vercel.app)
+
+## About me
+
+I'm a Frontend Developer based in Wrocław, Poland, specializing in React, TypeScript, and Next.js. I have commercial experience across a multi-module CRM platform, a HIPAA-compliant healthcare application, and a client website delivered solo from requirements to launch — covering UI architecture, REST API integration, i18n localization, and backend work in Nest.js. I hold a B.Sc. in Cloud Application Development from WSB Merito University (2026).
+
+- GitHub: [github.com/AndriiButenko05](https://github.com/AndriiButenko05)
+- LinkedIn: [linkedin.com/in/andriibutenkodeveloper](https://www.linkedin.com/in/andriibutenkodeveloper/)
+- Email: andrejbutik@gmail.com
+
+## About this project
+
+Personal portfolio site — a single-page layout covering Hero, About, Experience, Projects, Education & Languages, Links, and Contact.
+
+### Tech stack
+
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Language:** TypeScript
+- **UI:** React 19
+- **Styling:** CSS Modules (`app/page.module.css`), no CSS framework
+- **Fonts:** Pathway Extreme + JetBrains Mono, self-hosted via `next/font/google`
+- **Forms:** Formspree (contact form), `react-hot-toast` for submit feedback
+- **Images:** `next/image` with optimized/compressed static assets (via `sharp`)
+- **SEO:** `app/sitemap.ts`, `app/robots.ts`, Open Graph/Twitter metadata, JSON-LD `Person` schema
+- **Tooling:** ESLint, `eslint-config-next`
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Most content is data-driven from JSON files in `public/data/` (`experience.json`, `education.json`, `skills.json`, `languages.json`, `projects.json`), typed via the matching files in `types/`. Update the JSON to change copy without touching component markup.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+The contact form (`components/Contact/Contact.tsx`) posts to Formspree and requires:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_MY_CODE=<your Formspree form id>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set this in a local `.env.local` file (not committed).
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` — start the dev server
+- `npm run build` — production build
+- `npm run start` — run the production build
+- `npm run lint` — run ESLint

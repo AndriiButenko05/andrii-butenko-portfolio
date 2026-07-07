@@ -7,4 +7,5 @@ export interface Project {
   live: string;
   gradientColors?: [string, string];
   icon: string;
+  alt: string;
 }

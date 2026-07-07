@@ -1,0 +1,23 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "institution": "Uniwersytet WSB Merito Wrocław",
+      "credential": "B.Sc. in Cloud Application Development",
+      "period": "October 2023 – June 2026"
+    },
+    {
+      "id": 2,
+      "institution": "IT School GoIT",
+      "credential": "Fullstack Developer",
+      "period": "February – November 2025"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "name": "Claude Code 101 Certificate",
+      "issuer": "Anthropic"
+    }
+  ]
+}

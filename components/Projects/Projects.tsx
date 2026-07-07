@@ -71,7 +71,7 @@ export default function ProjectsSection() {
                   : {}
               }
               src={project.icon}
-              alt="photo of website"
+              alt={project.alt}
               width={350}
               height={250}
             />
