@@ -2,45 +2,124 @@
   "experience": [
     {
       "id": 1,
-      "role": "Frontend Developer",
-      "company": "Emdula",
-      "period": "January 2026 – Present",
-      "context": "Multi-module CRM platform for business clients (pre-release)",
+      "role": "Full-Stack Developer",
+      "company": "TenThousand",
+      "period": "Sep 2026 – Present",
+      "employment": "Full-time",
+      "context": "IT outsourcing company — client project: multi-brand consumer web platform, 30+ locales (under NDA).",
+      "team": "7 engineers (frontend and backend), designers, product owners",
+      "stack": [
+        "Astro SSR",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Alpine.js",
+        "Node.js",
+        "Java / Spring Boot",
+        "Cloudflare",
+        "Sentry"
+      ],
       "achievements": [
-        "Cut the main production bundle from 685 KB to 341 KB gzipped by converting 35 page routes to React.lazy + Suspense code splitting, improving first-paint on login.",
-        "Restructured a 149-component codebase into domain-based architecture via atomic per-domain PRs, reducing root-level files from ~120 to 21 and documenting the convention.",
-        "Hardened EN/UK localization: migrated hard-coded strings to i18next, fixed language persistence across signup/onboarding, and added a CI check that fails builds on non-localized strings.",
-        "Eliminated all react-hooks/exhaustive-deps violations (fixing real stale-closure bugs) and promoted the rule to error, blocking a recurring bug class from new PRs.",
-        "Resolved 20+ production defects across Deals, Properties, and Profile modules — including timezone conversion, modal navigation, and data-categorization bugs — verified against QA repro steps."
+        "Shipped features and fixes across an Astro/TypeScript monorepo and its Spring Boot backend, e.g. fixed framed QR codes that rendered broken in Safari and in PNG/JPEG exports by embedding the code as a nested SVG instead of a foreignObject.",
+        "Built custom highlight colors for CMS-edited rich text end to end: Spring Boot validation, server-side rendering that allows only strict hex values into inline styles, and rules for the LLM translator.",
+        "Moved the shared client JavaScript (15 modules, ~4.6k lines) out of the Spring Boot app into a frontend package, then deleted the backend copy after checking CDN analytics.",
+        "Launched 8 A/B and painted-door tests on landing pages, funnels and paywalls with the in-house experiment framework, keeping the control arm byte-identical, and cleaned up 9 finished experiments by removing the losing variant and its wiring.",
+        "Redesigned the flagship site's footer with a language picker for its 32 locales and added the picker to the shared footer used by four other brand sites.",
+        "Added a build-time check that fails when a site's locales, translation bundles and language names disagree, and fixed a production error found through Sentry, where quotes in translations broke Alpine.js expressions."
       ]
     },
     {
       "id": 2,
-      "role": "Full-Stack Developer Intern",
-      "company": "ZenBit",
-      "period": "March 2026 – May 2026",
-      "context": "Patient data de-identification platform for healthcare providers (under NDA)",
+      "role": "Freelance Frontend Developer",
+      "period": "May 2025 – Present",
+      "employment": "Freelance",
+      "context": "Websites built to order — VM Design (interior architecture studio): vmdesignproject.com; Grosters: grosters.com",
+      "links": [
+        { "label": "vmdesignproject.com", "href": "https://vmdesignproject.com" },
+        { "label": "grosters.com", "href": "https://grosters.com" }
+      ],
+      "stack": [
+        "Astro",
+        "TypeScript",
+        "HTML",
+        "SASS",
+        "vanilla JavaScript",
+        "Cloudflare Workers",
+        "Python"
+      ],
       "achievements": [
-        "Implemented passwordless magic-link authentication end-to-end (React + Nest.js), including verification emails, link expiry, and automatic session termination after 2h of inactivity to protect patient-facing accounts.",
-        "Built the 4-step patient-data de-identification flow from Figma designs — form handling, step navigation, and responsive layouts across desktop and tablet.",
-        "Developed the main dashboard with information-card overview per the new design system.",
-        "Implemented session-expired and link-expired states with responsive layouts, covering inactivity timeouts and invalid-session recovery.",
-        "Shipped through two client demo cycles, iterating on auth, sidebar, and email templates from stakeholder feedback."
+        {
+          "label": "VM Design",
+          "text": "built a multilingual Astro static site — 22 projects, 5 locales, ~190 pages from typed Markdown collections — with an image pipeline producing ~5,000 AVIF/WebP variants; Lighthouse 100 in all four categories on mobile and desktop (LCP 1.7 s / 0.4 s, CLS 0)."
+        },
+        {
+          "label": "VM Design",
+          "text": "wrote interactive components in vanilla TypeScript (before/after slider, carousel, native-dialog lightbox, WebGL gallery); dropping a React wrapper cut gallery JS from 289 KB to 65 KB (a 77% reduction)."
+        },
+        {
+          "label": "VM Design",
+          "text": "generated custom SVG regional maps from GeoJSON (no map library) and built a Python pipeline to redact client PDFs before publication."
+        },
+        {
+          "label": "VM Design",
+          "text": "handled the production setup end-to-end: domain, DNS and Cloudflare configuration, with the site deployed on Cloudflare Workers."
+        },
+        {
+          "label": "Grosters (grosters.com)",
+          "text": "shipped a 4-page mobile-first commercial site solo, from requirements to production; optimized images and loading — Lighthouse 99 Performance / 100 Best Practices / 91 Accessibility (LCP 0.8 s, CLS 0)."
+        }
       ]
     },
     {
       "id": 3,
-      "role": "Freelance Frontend Developer",
-      "company": "Grosters Company",
-      "companyLink": "https://grosters.com",
-      "period": "May 2025 – October 2025",
-      "context": "4-page commercial website delivered solo, from client requirements to production launch",
+      "role": "Frontend Developer",
+      "company": "Slotstars",
+      "period": "Jun 2026 – Oct 2026",
+      "employment": "Part-time",
+      "context": "Multi-brand online casino platform (under NDA).",
+      "team": "1–2 developers, QA, product manager",
+      "stack": [
+        "React 19",
+        "TypeScript",
+        "Redux Toolkit / RTK Query",
+        "Tailwind CSS",
+        "i18next",
+        "Vite"
+      ],
       "achievements": [
-        "Designed and shipped a 4-page commercial website solo, from client requirements to production deployment — achieving Lighthouse scores of 99 Performance / 100 Best Practices / 91 Accessibility.",
-        "Built a mobile-first layout across 3 breakpoints with consistent rendering on iOS Safari, Chrome, Firefox, and Edge.",
-        "Engineered modular UI sections and interactive modals in vanilla JavaScript — no framework, keeping the bundle minimal and load times near-instant on mobile networks.",
-        "Structured semantic HTML5 and BEM-style CSS architecture, making content updates straightforward for the client post-handoff.",
-        "Managed the client relationship end-to-end: requirements, revision cycles, scope, and final delivery on the agreed timeline."
+        "Delivered 30+ merged PRs (bug fixes, QA tickets, Figma-based UI) in a monorepo serving three brands and four licensed markets: UK, Spain, Cyprus, Sweden.",
+        "Built fixes and features for the Swedish market launch, my largest area of work: localization, currency and number formatting, regulator-specific content, restricted-content removal.",
+        "Fixed a translation-loading race condition that showed raw i18n keys on 92% of cold page loads; it no longer reproduces.",
+        "Consolidated the design system (25 font sizes down to an 11-step scale, shared button variants) and improved accessibility and mobile UX: touch targets, alt text, iOS fixes."
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Frontend Developer",
+      "company": "Emdula",
+      "period": "Jan 2026 – Aug 2026",
+      "employment": "Full-time",
+      "context": "Multi-module CRM platform for business clients (pre-release).",
+      "team": "developers, QA, designers, product owner",
+      "stack": ["React", "TypeScript", "Tailwind CSS", "i18next", "Vite"],
+      "achievements": [
+        "Cut the main production bundle from 685 KB to 341 KB gzipped by converting 35 page routes to React.lazy + Suspense code splitting.",
+        "Restructured a 149-component codebase into a domain-based architecture, reducing root-level files from ~120 to 21.",
+        "Migrated hard-coded strings to i18next (EN/UK) and added a CI check that fails builds on non-localized strings.",
+        "Fixed 30+ production defects across Deals, Properties and Profile, and enforced react-hooks/exhaustive-deps as an error to block a recurring bug class."
+      ]
+    },
+    {
+      "id": 5,
+      "role": "Full-Stack Developer Intern",
+      "company": "ZenBit",
+      "period": "Mar 2026 – May 2026",
+      "employment": "Part-time",
+      "context": "Patient data de-identification platform for healthcare providers (under NDA)",
+      "stack": ["React", "TypeScript", "MUI", "Nest.js"],
+      "achievements": [
+        "Implemented passwordless magic-link authentication end-to-end (React + Nest.js), with link expiry and automatic session termination after 2h of inactivity.",
+        "Built the 4-step patient data de-identification flow and the main dashboard from Figma designs, responsive across desktop and tablet.",
+        "Iterated on auth, sidebar and email templates over two client demo cycles."
       ]
     }
   ]

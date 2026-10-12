@@ -12,17 +12,24 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isSending) return;
     if (!code) {
       toast.error("Form configuration is missing.");
       return;
     }
+    setIsSending(true);
     try {
       const response = await fetch(`https://formspree.io/f/${code}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        // Formspree only answers with JSON (instead of a redirect) when asked to.
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
@@ -30,11 +37,13 @@ export default function Contact() {
         setFormData({ name: "", email: "", subject: "", message: "" });
         toast.success("Message sent to my email!");
       } else {
-        const errorData = await response.json();
-        toast.error(errorData.error || "Oops! Something went wrong.");
+        const errorData = await response.json().catch(() => null);
+        toast.error(errorData?.error || "Oops! Something went wrong.");
       }
-    } catch (err) {
+    } catch {
       toast.error("Failed to connect to the server.");
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -102,8 +111,13 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <button type="submit" className={css["submit-btn"]}>
-            <span>Send Message</span>
+          <button
+            type="submit"
+            className={css["submit-btn"]}
+            disabled={isSending}
+            aria-busy={isSending}
+          >
+            <span>{isSending ? "Sending..." : "Send Message"}</span>
           </button>
         </form>
       </div>

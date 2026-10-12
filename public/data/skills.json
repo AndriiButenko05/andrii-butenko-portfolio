@@ -2,37 +2,63 @@
   "skills": [
     {
       "id": 1,
-      "label": "Core",
+      "label": "Frontend",
       "items": [
-        "JavaScript/TypeScript",
+        "JavaScript / TypeScript",
         "React",
-        "Next.js (SSR, SSG)",
-        "HTML5/CSS/SASS",
-        "Tailwind CSS"
+        "Next.js",
+        "Astro",
+        "Redux Toolkit / RTK Query",
+        "Tailwind CSS",
+        "HTML5 / CSS / SASS",
+        "MUI",
+        "Swiper",
+        "i18next"
+      ],
+      "extra": [
+        "performance optimization",
+        "responsive design",
+        "accessibility"
       ]
     },
     {
       "id": 2,
-      "label": "State & Data",
-      "items": ["Redux", "Zustand", "React Query", "REST API"]
-    },
-    {
-      "id": 3,
-      "label": "Backend Exposure",
-      "items": ["Node.js", "Express.js", "Nest.js", "MongoDB"]
-    },
-    {
-      "id": 4,
       "label": "Tools",
       "items": [
         "Git",
+        "GitHub",
+        "pnpm / npm (workspaces, monorepo)",
         "Vite",
-        "i18next",
-        "MUI",
+        "ESLint",
+        "Prettier",
+        "Chrome DevTools",
+        "Lighthouse / PageSpeed Insights",
+        "Postman",
+        "Swagger / OpenAPI",
+        "Sentry",
         "Figma",
-        "Jira / GitHub PRs",
-        "ESLint"
+        "Agile / Scrum",
+        "Jira",
+        "Linear",
+        "Claude Code"
       ]
+    },
+    {
+      "id": 3,
+      "label": "Cloud / DevOps",
+      "items": [
+        "Azure",
+        "Cloudflare (Workers, DNS, CDN analytics)",
+        "Vercel",
+        "Docker",
+        "CI/CD (GitHub Actions)"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Backend",
+      "items": ["Node.js", "Nest.js", "MongoDB", "REST API"],
+      "extra": ["Java / Spring Boot (working knowledge)"]
     }
   ]
 }

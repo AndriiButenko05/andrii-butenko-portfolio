@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    // CSS is small (~9 KB gzipped), so inlining it removes render-blocking requests.
+    inlineCss: true,
+  },
 };
 
 export default nextConfig;

@@ -1,4 +1,3 @@
-"use client";
 import css from "@/app/page.module.css";
 import Link from "next/link";
 export default function Footer() {
@@ -9,8 +8,8 @@ export default function Footer() {
         <div className={css["footer-brand"]}>
           <h3>&lt;AB /&gt;</h3>
           <p>
-            Crafting fast, accessible interfaces with React, TypeScript, and
-            Next.js. Focused on performance, clean code, and user experience.
+            Frontend Developer | React, TypeScript, Performance. Based in
+            Wrocław, open to remote.
           </p>
         </div>
         <div className={css["footer-links"]}>
@@ -24,6 +23,12 @@ export default function Footer() {
             </li>
             <li>
               <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#education">Education</a>
+            </li>
+            <li>
+              <a href="#links">Connect</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

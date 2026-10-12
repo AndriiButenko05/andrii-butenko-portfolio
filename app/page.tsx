@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav/Nav";
 import Hero from "@/components/Hero/Hero";
+import TechStack from "@/components/TechStack/TechStack";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
@@ -11,6 +12,7 @@ export default function Portfolio() {
     <>
       <Nav />
       <Hero />
+      <TechStack />
       <About />
       <Experience />
       <Projects />

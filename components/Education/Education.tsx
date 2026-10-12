@@ -23,6 +23,19 @@ export default function Education() {
             <div key={entry.id} className={css["education-item"]}>
               <h4>{entry.credential}</h4>
               <p>{entry.institution}</p>
+              {entry.note && (
+                <p className={css["education-note"]}>{entry.note}</p>
+              )}
+              {entry.description && (
+                <p className={css["education-description"]}>
+                  {entry.description}
+                </p>
+              )}
+              {entry.details?.map((detail) => (
+                <p key={detail} className={css["education-description"]}>
+                  {detail}
+                </p>
+              ))}
               <span className={css["education-period"]}>{entry.period}</span>
             </div>
           ))}
@@ -33,7 +46,7 @@ export default function Education() {
           {certificates.map((cert) => (
             <div key={cert.id} className={css["education-item"]}>
               <h4>{cert.name}</h4>
-              <p>{cert.issuer}</p>
+              {cert.issuer && <p>{cert.issuer}</p>}
             </div>
           ))}
         </div>

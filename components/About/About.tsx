@@ -1,44 +1,52 @@
 import css from "@/app/page.module.css";
-import Image from "next/image";
 import skillsData from "@/public/data/skills.json";
 import { SkillGroup } from "@/types/skills";
+import AboutProfileCard from "@/components/ProfileCard/AboutProfileCard";
 
 const skillGroups = skillsData.skills as SkillGroup[];
+
+const coreStack = [
+  "JavaScript / TypeScript",
+  "React",
+  "Next.js",
+  "Astro",
+  "Redux Toolkit",
+  "Tailwind CSS",
+  "HTML / CSS",
+  "Node.js",
+];
 
 export default function About() {
   return (
     <section className={css.about} id="about">
       <div className={css["about-container"]}>
-        <Image
-          src="/andrii-butenko-transparent.png"
-          alt="Photo of Andrii Butenko"
-          height={600}
-          width={431}
-          className={css["about-image"]}
-          priority
-        />
+        <div className={css["about-card"]}>
+          <AboutProfileCard />
+        </div>
 
         <div className={css["about-content"]}>
           <h2>
             Frontend <span className={css.highlight}>Developer</span>
           </h2>
           <p>
-            I&apos;m a Frontend Developer based in Wrocław, with a B.Sc. in
-            Cloud Application Development from WSB Merito University (2026). I
-            combine that foundation with hands-on experience shipping
-            production features across CRM and healthcare platforms.
+            Focus on performance, localization, accessibility and CI quality;
+            comfortable making backend changes in Nest.js and Spring Boot when
+            a feature needs them.
           </p>
-          <p>
-            My focus is building performant, accessible interfaces with React,
-            TypeScript, and Next.js — with enough backend fluency in Node.js
-            and Nest.js to own a feature end-to-end, from UI to API.
+          <p>Based in Wrocław, open to remote.</p>
+          <p className={css["core-stack"]}>
+            <span>Core stack</span>
+            {coreStack.join(" • ")}
           </p>
 
           <div className={css.skills}>
             {skillGroups.map((group) => (
               <div key={group.id} className={css["skill-item"]}>
-                <h4>{group.label}</h4>
-                <p>{group.items.join(", ")}</p>
+                <h3>{group.label}</h3>
+                <p>
+                  {group.items.join(", ")}
+                  {group.extra && `; ${group.extra.join(", ")}`}
+                </p>
               </div>
             ))}
           </div>

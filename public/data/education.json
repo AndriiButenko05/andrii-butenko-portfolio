@@ -2,21 +2,30 @@
   "education": [
     {
       "id": 1,
-      "institution": "Uniwersytet WSB Merito Wrocław",
+      "institution": "Uniwersytet WSB Merito Wrocław · Wrocław",
       "credential": "B.Sc. in Cloud Application Development",
-      "period": "October 2023 – June 2026"
+      "period": "Oct 2023 – Jun 2026",
+      "note": "Graduated with honours",
+      "details": [
+        "Key coursework: Web Development, SQL Databases, Cloud Computing, Linux Systems, Algorithms"
+      ]
     },
     {
       "id": 2,
       "institution": "IT School GoIT",
       "credential": "Fullstack Developer",
-      "period": "February – November 2025"
+      "period": "Feb 2025 – Nov 2025",
+      "description": "Intensive full-stack program: React, TypeScript, Next.js, JavaScript, Node.js, Express.js"
     }
   ],
   "certificates": [
     {
       "id": 1,
-      "name": "Claude Code 101 Certificate",
+      "name": "EF SET English Certificate (C1)"
+    },
+    {
+      "id": 2,
+      "name": "Claude Code 101",
       "issuer": "Anthropic"
     }
   ]

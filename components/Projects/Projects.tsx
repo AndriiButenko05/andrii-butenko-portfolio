@@ -1,58 +1,70 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import css from "@/app/page.module.css"; // Ensure this path is correct
+import { useState, useRef } from "react";
+import css from "@/app/page.module.css";
+import projectsData from "@/public/data/projects.json";
 import { Project } from "@/types/project";
 import Link from "next/link";
 import Image from "next/image";
+import TargetCursor from "@/components/TargetCursor/TargetCursor";
 
-export default function ProjectsSection() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
-  const [projectsToShow, setProjectsToShow] = useState(3);
-  const [loading, setLoading] = useState(true);
+const projects = projectsData.projects as Project[];
+const PAGE_SIZE = 3;
 
-  useEffect(() => {
-    const loadProjects = async () => {
-      try {
-        const response = await fetch("/data/projects.json");
-        const data = await response.json();
-        setProjects(data.projects);
-        setDisplayedProjects(data.projects.slice(0, projectsToShow));
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading projects:", error);
-        setLoading(false);
+function ProjectImage({ project, index }: { project: Project; index: number }) {
+  const image = (
+    <Image
+      className={`${css["project-image"]} ${css[`project-image-${(index % 3) + 1}`]}`}
+      style={
+        project.gradientColors
+          ? {
+              background: `linear-gradient(135deg, ${project.gradientColors[0]} 0%, ${project.gradientColors[1]} 100%)`,
+            }
+          : {}
       }
-    };
+      src={project.icon}
+      alt={project.alt}
+      width={1000}
+      height={522}
+      sizes="(min-width: 1024px) 440px, (min-width: 768px) 50vw, 100vw"
+    />
+  );
 
-    loadProjects();
-  }, []);
-
-  useEffect(() => {
-    setDisplayedProjects(projects.slice(0, projectsToShow));
-  }, [projectsToShow, projects]);
-
-  const loadMore = () => {
-    setProjectsToShow((prev) => prev + 3);
-  };
-
-  const hasMore = projectsToShow < projects.length;
-
-  if (loading) {
-    return (
-      <section className={css.projects} id="projects">
-        <div className={css["section-header"]}>
-          <div className={css["section-label"]}>Featured Work</div>
-          <h2 className={css["section-title"]}>Recent Projects</h2>
-        </div>
-        <div className={css["loading-state"]}>Loading projects...</div>
-      </section>
-    );
-  }
+  if (!project.live) return image;
 
   return (
-    <section className={css.projects} id="projects">
+    <Link
+      href={project.live}
+      className={css["project-image-link"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {image}
+    </Link>
+  );
+}
+
+export default function ProjectsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [projectsToShow, setProjectsToShow] = useState(PAGE_SIZE);
+
+  const displayedProjects = projects.slice(0, projectsToShow);
+  const hasMore = projectsToShow < projects.length;
+
+  const loadMore = () => {
+    setProjectsToShow((prev) => prev + PAGE_SIZE);
+  };
+
+  return (
+    <section className={css.projects} id="projects" ref={sectionRef}>
+      <TargetCursor
+        container={sectionRef}
+        cursorColor="#d95d39"
+        blendMode="normal"
+        spinDuration={2}
+        hideDefaultCursor
+        parallaxOn
+      />
       <div className={css["section-header"]}>
         <div className={css["section-label"]}>Featured Work</div>
         <h2 className={css["section-title"]}>Recent Projects</h2>
@@ -60,21 +72,12 @@ export default function ProjectsSection() {
 
       <div className={css["projects-grid"]}>
         {displayedProjects.map((project, index) => (
-          <div key={project.id || index} className={css["project-card"]}>
-            <Image
-              className={`${css["project-image"]} ${css[`project-image-${(index % 3) + 1}`]}`}
-              style={
-                project.gradientColors
-                  ? {
-                      background: `linear-gradient(135deg, ${project.gradientColors[0]} 0%, ${project.gradientColors[1]} 100%)`,
-                    }
-                  : {}
-              }
-              src={project.icon}
-              alt={project.alt}
-              width={350}
-              height={250}
-            />
+          <div
+            key={project.id || index}
+            className={`${css["project-card"]} cursor-target`}
+            data-cursor-label={project.title}
+          >
+            <ProjectImage project={project} index={index} />
             <div className={css["project-content"]}>
               <div className={css["project-tags"]}>
                 {project.tags &&
@@ -86,20 +89,30 @@ export default function ProjectsSection() {
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <Link
-                href={project.link || "#"}
-                className={css["project-link"]}
-                target="_blank"
-              >
-                View Project
-              </Link>
-              <Link
-                href={project.live || "#"}
-                className={css["live-link"]}
-                target="_blank"
-              >
-                Website
-              </Link>
+              <div className={css["project-links"]}>
+                {project.link && (
+                  <Link
+                    href={project.link}
+                    className={`${css["project-link"]} cursor-target`}
+                    data-cursor-label="Code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project
+                  </Link>
+                )}
+                {project.live && (
+                  <Link
+                    href={project.live}
+                    className={`${css["live-link"]} cursor-target`}
+                    data-cursor-label="Live"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Website
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -107,7 +120,11 @@ export default function ProjectsSection() {
 
       {hasMore && (
         <div className={css["load-more-container"]}>
-          <button onClick={loadMore} className={css["btn-load-more"]}>
+          <button
+            onClick={loadMore}
+            className={`${css["btn-load-more"]} cursor-target`}
+            data-cursor-label="More"
+          >
             <span>Load More Projects</span>
           </button>
         </div>

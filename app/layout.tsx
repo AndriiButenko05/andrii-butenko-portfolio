@@ -14,18 +14,20 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "600"],
 });
 
+const title = "Andrii Butenko | Frontend Developer";
+const description =
+  "Frontend Developer with 1.5+ years of commercial experience in React and TypeScript across an outsourced multi-brand platform (30+ locales), a regulated online casino platform, a multi-module CRM and a healthcare application. Based in Wrocław, open to remote.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://andrii-butenko-portfolio.vercel.app"),
-  title: "Andrii Butenko | Frontend Developer",
-  description:
-    "Andrii Butenko — Frontend Developer specializing in React, TypeScript, and Next.js, with commercial experience across CRM and healthcare platforms.",
+  title,
+  description,
   alternates: {
     canonical: "https://andrii-butenko-portfolio.vercel.app",
   },
   openGraph: {
-    title: "Andrii Butenko | Frontend Developer",
-    description:
-      "Frontend Developer specializing in React, TypeScript, and Next.js, with commercial experience across CRM and healthcare platforms.",
+    title,
+    description,
     url: "https://andrii-butenko-portfolio.vercel.app",
     siteName: "Andrii Butenko Portfolio",
     locale: "en_US",
@@ -33,9 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Andrii Butenko | Frontend Developer",
-    description:
-      "Frontend Developer specializing in React, TypeScript, and Next.js, with commercial experience across CRM and healthcare platforms.",
+    title,
+    description,
   },
 };
 
@@ -45,6 +46,10 @@ const personJsonLd = {
   name: "Andrii Butenko",
   jobTitle: "Frontend Developer",
   url: "https://andrii-butenko-portfolio.vercel.app",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Uniwersytet WSB Merito Wrocław",
+  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Wrocław",

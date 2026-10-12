@@ -1,19 +1,24 @@
 import css from "@/app/page.module.css";
+import HeroLanyard from "@/components/Lanyard/HeroLanyard";
+
 export default function Hero() {
   return (
     <section className={css.hero}>
+      <HeroLanyard />
       <div className={css.container}>
         <div className={css["hero-content"]}>
-          <div className={css["hero-label"]}>Frontend Developer</div>
+          <div className={css["hero-label"]}>
+            React, TypeScript, Performance
+          </div>
           <h1>
-            Building Fast,
-            <span className={css.highlight}>Accessible Interfaces</span>
+            Andrii
+            <span className={css.highlight}>Butenko</span>
           </h1>
           <p>
-            Frontend developer specializing in React, TypeScript, and
-            Next.js — with commercial experience across a multi-module CRM
-            platform, a HIPAA-compliant healthcare app, and a client site
-            delivered solo from requirements to launch.
+            Frontend Developer with 1.5+ years of commercial experience in
+            React and TypeScript across an outsourced multi-brand platform (30+
+            locales), a regulated online casino platform, a multi-module CRM
+            and a healthcare application.
           </p>
           <div className={css["cta-group"]}>
             <a href="#projects" className={`${css.btn} ${css["btn-primary"]}`}>
