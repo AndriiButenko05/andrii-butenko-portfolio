@@ -13,9 +13,9 @@
     {
       "id": 2,
       "institution": "IT School GoIT",
-      "credential": "Fullstack Developer",
+      "credential": "Full-Stack Development Program",
       "period": "Feb 2025 – Nov 2025",
-      "description": "Intensive full-stack program: React, TypeScript, Next.js, JavaScript, Node.js, Express.js"
+      "description": "Intensive program: React, TypeScript, Next.js, JavaScript, Node.js, Express.js"
     }
   ],
   "certificates": [

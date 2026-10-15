@@ -1,26 +1,8 @@
 import css from "@/app/page.module.css";
 import experienceData from "@/public/data/experience.json";
-import { ExperienceEntry, ExperienceLink } from "@/types/experience";
+import { ExperienceEntry } from "@/types/experience";
 
 const experience = experienceData.experience as ExperienceEntry[];
-
-// Wraps each link label found in the text with an anchor.
-function linkify(text: string, links: ExperienceLink[] = []) {
-  if (links.length === 0) return text;
-  const escaped = links.map((link) =>
-    link.label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-  );
-  return text.split(new RegExp(`(${escaped.join("|")})`)).map((part, index) => {
-    const link = links.find((item) => item.label === part);
-    return link ? (
-      <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
-        {part}
-      </a>
-    ) : (
-      part
-    );
-  });
-}
 
 export default function Experience() {
   return (
@@ -71,9 +53,23 @@ export default function Experience() {
             </summary>
 
             <div className={css["exp-body"]}>
-              <p className={css["experience-context"]}>
-                {linkify(entry.context, entry.links)}
-              </p>
+              <p className={css["experience-context"]}>{entry.context}</p>
+              {entry.links && (
+                <p className={css["experience-links"]}>
+                  {entry.links.map((link, i) => (
+                    <span key={link.href}>
+                      {i > 0 && " • "}
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label}
+                      </a>
+                    </span>
+                  ))}
+                </p>
+              )}
               {entry.team && (
                 <p className={css["experience-team"]}>
                   <span>Team:</span> {entry.team}

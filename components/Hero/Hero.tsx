@@ -16,9 +16,9 @@ export default function Hero() {
           </h1>
           <p>
             Frontend Developer with 1.5+ years of commercial experience in React
-            and TypeScript across an outsourced multi-brand platform, a
-            regulated online casino platform, a multi-module CRM and a
-            healthcare application.
+            (TypeScript and JavaScript) across a multi-brand platform, a
+            regulated online casino, a multi-module CRM and a healthcare
+            application.
           </p>
           <div className={css["cta-group"]}>
             <a href="#projects" className={`${css.btn} ${css["btn-primary"]}`}>

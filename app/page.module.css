@@ -1691,9 +1691,20 @@ body::before {
   margin-bottom: 0.5rem;
 }
 
-.experience-context a {
+.experience-links {
+  font-family: var(--font-jetbrains-mono), monospace;
+  color: var(--khaki);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-links a {
   color: var(--khaki);
   text-decoration: underline;
+}
+
+.experience-links a:hover {
+  color: var(--burnt-orange);
 }
 
 .experience-team {

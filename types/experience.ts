@@ -15,7 +15,7 @@ export interface ExperienceEntry {
   context: string;
   team?: string;
   stack: string[];
-  // Occurrences of each label inside `context` are rendered as links.
+  // Rendered as a separate line of links under `context`.
   links?: ExperienceLink[];
   achievements: ExperienceAchievement[];
 }

@@ -29,11 +29,16 @@ export default function About() {
             Frontend <span className={css.highlight}>Developer</span>
           </h2>
           <p>
-            Focus on performance, localization, accessibility and CI quality;
-            comfortable making backend changes in Nest.js and Spring Boot when a
-            feature needs them.
+            Ship product features and UI across the whole frontend: components,
+            state management, API integration and responsive layouts, while
+            keeping performance and code quality high (Lighthouse 100, main
+            bundle cut by 45%). Comfortable making backend changes in NestJS
+            and Spring Boot.
           </p>
-          <p>Based in Wrocław, open to remote.</p>
+          <p>
+            Used to working in cross-functional teams of up to 7 engineers with
+            designers and product owners. Based in Wrocław, open to remote.
+          </p>
           <p className={css["core-stack"]}>
             <span>Core stack</span>
             {coreStack.join(" • ")}

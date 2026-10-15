@@ -19,12 +19,11 @@
         "Sentry"
       ],
       "achievements": [
-        "Shipped features and fixes across an Astro/TypeScript monorepo and its Spring Boot backend, e.g. fixed framed QR codes that rendered broken in Safari and in PNG/JPEG exports by embedding the code as a nested SVG instead of a foreignObject.",
+        "Shipped features and fixes across an Astro/TypeScript monorepo and its Spring Boot backend, e.g. fixed framed QR codes that rendered broken in Safari and in PNG/JPEG exports by embedding the code as a nested SVG instead of a foreignObject; also fixed a production error found through Sentry, where quotes in translations broke Alpine.js expressions.",
         "Built custom highlight colors for CMS-edited rich text end to end: Spring Boot validation, server-side rendering that allows only strict hex values into inline styles, and rules for the LLM translator.",
         "Moved the shared client JavaScript (15 modules, ~4.6k lines) out of the Spring Boot app into a frontend package, then deleted the backend copy after checking CDN analytics.",
         "Launched 8 A/B and painted-door tests on landing pages, funnels and paywalls with the in-house experiment framework, keeping the control arm byte-identical, and cleaned up 9 finished experiments by removing the losing variant and its wiring.",
-        "Redesigned the flagship site's footer with a language picker for its 32 locales and added the picker to the shared footer used by four other brand sites.",
-        "Added a build-time check that fails when a site's locales, translation bundles and language names disagree, and fixed a production error found through Sentry, where quotes in translations broke Alpine.js expressions."
+        "Redesigned the flagship site's footer with a language picker for its 32 locales (reused in the shared footer of four other brand sites) and added a build-time check that fails when a site's locales, translation bundles and language names disagree."
       ]
     },
     {
@@ -32,7 +31,7 @@
       "role": "Freelance Frontend Developer",
       "period": "May 2025 – Present",
       "employment": "Freelance",
-      "context": "Websites built to order — VM Design (interior architecture studio): vmdesignproject.com; Grosters: grosters.com",
+      "context": "Websites built to order: VM Design (interior architecture studio) and Grosters",
       "links": [
         { "label": "vmdesignproject.com", "href": "https://vmdesignproject.com" },
         { "label": "grosters.com", "href": "https://grosters.com" }
@@ -40,28 +39,30 @@
       "stack": [
         "Astro",
         "TypeScript",
-        "HTML",
+        "OGL (WebGL)",
+        "sharp",
         "SASS",
         "vanilla JavaScript",
+        "GitHub Actions",
         "Cloudflare Workers",
         "Python"
       ],
       "achievements": [
         {
           "label": "VM Design",
-          "text": "built a multilingual Astro static site — 22 projects, 5 locales, ~190 pages from typed Markdown collections — with an image pipeline producing ~5,000 AVIF/WebP variants; Lighthouse 100 in all four categories on mobile and desktop (LCP 1.7 s / 0.4 s, CLS 0)."
+          "text": "built a multilingual (EN/FR/IT/RU/UK) Astro site with Zod-typed Markdown collections: 22 projects, 216 static pages (165 indexable) and an astro:assets / sharp image pipeline producing 4,500+ AVIF/WebP variants; Lighthouse 100 in all four categories on desktop, 96+ Performance and 100 in the rest on mobile, CLS 0."
         },
         {
           "label": "VM Design",
-          "text": "wrote interactive components in vanilla TypeScript (before/after slider, carousel, native-dialog lightbox, WebGL gallery); dropping a React wrapper cut gallery JS from 289 KB to 65 KB (a 77% reduction)."
+          "text": "wrote interactive components in vanilla TypeScript (before/after slider, carousel, native-dialog lightbox, WebGL gallery on OGL); replacing a React island cut gallery JS from ~290 KB to 65 KB (−77%)."
         },
         {
           "label": "VM Design",
-          "text": "generated custom SVG regional maps from GeoJSON (no map library) and built a Python pipeline to redact client PDFs before publication."
+          "text": "implemented technical SEO across five locales: localized meta, canonical + hreflang, i18n sitemap, JSON-LD (ProfessionalService, BreadcrumbList, CreativeWork) and 1,384 translated image alt texts."
         },
         {
           "label": "VM Design",
-          "text": "handled the production setup end-to-end: domain, DNS and Cloudflare configuration, with the site deployed on Cloudflare Workers."
+          "text": "set up CI/CD from GitHub Actions to Cloudflare Workers with a custom domain, DNS and long-term asset caching; generated SVG region maps from GeoJSON (no map library) and a Python pipeline that redacts client data from 199 PDF drawing sheets."
         },
         {
           "label": "Grosters (grosters.com)",
@@ -75,21 +76,23 @@
       "company": "Slotstars",
       "period": "Jun 2026 – Oct 2026",
       "employment": "Part-time",
-      "context": "Multi-brand online casino platform (under NDA).",
-      "team": "1–2 developers, QA, product manager",
+      "context": "Regulated online casino (under NDA): 3 brands in one monorepo; licences UKGC, DGOJ (Spain), Sweden, MGA.",
+      "team": "1–2 developers, QA, PM",
       "stack": [
         "React 19",
         "TypeScript",
+        "React Router v7",
         "Redux Toolkit / RTK Query",
-        "Tailwind CSS",
+        "Tailwind CSS v4",
         "i18next",
-        "Vite"
+        "Vite",
+        "SkillOnNet API"
       ],
       "achievements": [
-        "Delivered 30+ merged PRs (bug fixes, QA tickets, Figma-based UI) in a monorepo serving three brands and four licensed markets: UK, Spain, Cyprus, Sweden.",
-        "Built fixes and features for the Swedish market launch, my largest area of work: localization, currency and number formatting, regulator-specific content, restricted-content removal.",
-        "Fixed a translation-loading race condition that showed raw i18n keys on 92% of cold page loads; it no longer reproduces.",
-        "Consolidated the design system (25 font sizes down to an 11-step scale, shared button variants) and improved accessibility and mobile UX: touch targets, alt text, iOS fixes."
+        "Delivered 38 merged PRs in four months (196 files changed): Figma-to-code UI, mobile layouts and QA fixes across the lobby, jackpots, VIP, promotions and game-category pages.",
+        "Prepared the Swedish market launch: market-level feature flags that remove unavailable sections (welcome bonus, live casino) from routes, navigation and sitemap, Swedish currency formatting, and a fix for SkillOnNet web components serving English legal documents.",
+        "Fixed an i18next initialization race that left raw translation keys in the navigation on 46 of 50 cold page loads (92%).",
+        "Consolidated typography into one named scale (57 arbitrary font sizes removed), raised mobile touch targets to 44px and fixed an iOS Safari sticky-header flicker."
       ]
     },
     {
@@ -98,14 +101,25 @@
       "company": "Emdula",
       "period": "Jan 2026 – Aug 2026",
       "employment": "Full-time",
-      "context": "Multi-module CRM platform for business clients (pre-release).",
+      "context": "Multi-module CRM platform for real-estate agencies (pre-release).",
       "team": "developers, QA, designers, product owner",
-      "stack": ["React", "TypeScript", "Tailwind CSS", "i18next", "Vite"],
+      "stack": [
+        "React 19",
+        "JavaScript (JSX)",
+        "React Router 7",
+        "Vite",
+        "Tailwind CSS",
+        "CSS Modules",
+        "Radix UI",
+        "i18next",
+        "TipTap",
+        "Axios"
+      ],
       "achievements": [
-        "Cut the main production bundle from 685 KB to 341 KB gzipped by converting 35 page routes to React.lazy + Suspense code splitting.",
-        "Restructured a 149-component codebase into a domain-based architecture, reducing root-level files from ~120 to 21.",
-        "Migrated hard-coded strings to i18next (EN/UK) and added a CI check that fails builds on non-localized strings.",
-        "Fixed 30+ production defects across Deals, Properties and Profile, and enforced react-hooks/exhaustive-deps as an error to block a recurring bug class."
+        "Cut the main JavaScript chunk by 45% (621 KB to 341 KB gzip) and first-load JS by ~48% by moving 33 pages to React.lazy + Suspense, with a chunk-load error boundary and idle-time prefetching.",
+        "Made react-hooks/exhaustive-deps and rules-of-hooks errors and cleared the ESLint backlog (225 problems to 0) across 92 files; reorganized 53 root-level components into 21 domain-based folders.",
+        "Rebuilt the deal details view from Figma: activities, notes CRUD and linked-property sections with scroll-spy navigation (IntersectionObserver).",
+        "Fixed 15 defects across Deals, Properties, Profile, Contacts and Documents, e.g. timezone-shifted activity times and HEIC / oversized photo uploads (client-side JPEG compression, HTTP 413 handling); moved hard-coded strings to i18next (EN/UK)."
       ]
     },
     {
@@ -114,12 +128,23 @@
       "company": "ZenBit",
       "period": "Mar 2026 – May 2026",
       "employment": "Part-time",
-      "context": "Patient data de-identification platform for healthcare providers (under NDA)",
-      "stack": ["React", "TypeScript", "MUI", "Nest.js"],
+      "context": "Clinical data de-identification platform for healthcare providers (under NDA).",
+      "team": "4 developers",
+      "stack": [
+        "React 19",
+        "TypeScript",
+        "MUI",
+        "Redux Toolkit",
+        "react-hook-form + yup",
+        "NestJS",
+        "TypeORM / MySQL",
+        "JWT",
+        "Swagger"
+      ],
       "achievements": [
-        "Implemented passwordless magic-link authentication end-to-end (React + Nest.js), with link expiry and automatic session termination after 2h of inactivity.",
-        "Built the 4-step patient data de-identification flow and the main dashboard from Figma designs, responsive across desktop and tablet.",
-        "Iterated on auth, sidebar and email templates over two client demo cycles."
+        "Built passwordless magic-link authentication end to end: a NestJS auth module (2 REST endpoints, TypeORM migration, single-use 256-bit tokens, JWT issuance, Swagger docs) and the React sign-in / verify flow with react-hook-form + yup.",
+        "Built the UI of a 4-step clinical-data de-identification wizard: custom stepper synced with the sidebar via Redux Toolkit, upload validation (5 MB / 250k characters) with progress feedback and responsive styling.",
+        "Developed the app shell (dashboard layout, collapsible sidebar, top bar, support modal) and dashboard page for desktop and tablet; handled JWT session expiry with a 401 interceptor guard and a Session Expired page."
       ]
     }
   ]

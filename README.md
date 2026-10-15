@@ -9,7 +9,7 @@ Live: [andrii-butenko-portfolio.vercel.app](https://andrii-butenko-portfolio.ver
 
 ## About me
 
-Frontend Developer with 1.5+ years of commercial experience in React and TypeScript across an outsourced multi-brand platform (30+ locales), a regulated online casino platform, a multi-module CRM and a healthcare application. Based in Wrocław, open to remote.
+Frontend Developer with 1.5+ years of commercial experience in React (TypeScript and JavaScript) across a multi-brand platform (30+ locales), a regulated online casino, a multi-module CRM and a healthcare application. Based in Wrocław, open to remote.
 
 - GitHub: [github.com/AndriiButenko05](https://github.com/AndriiButenko05)
 - LinkedIn: [linkedin.com/in/andriibutenkodeveloper](https://www.linkedin.com/in/andriibutenkodeveloper/)

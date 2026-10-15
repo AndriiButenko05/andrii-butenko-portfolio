@@ -16,7 +16,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 const title = "Andrii Butenko | Frontend Developer";
 const description =
-  "Frontend Developer with 1.5+ years of commercial experience in React and TypeScript across an outsourced multi-brand platform (30+ locales), a regulated online casino platform, a multi-module CRM and a healthcare application. Based in Wrocław, open to remote.";
+  "Frontend Developer with 1.5+ years of commercial experience in React (TypeScript and JavaScript) across a multi-brand platform (30+ locales), a regulated online casino, a multi-module CRM and a healthcare application. Based in Wrocław, open to remote.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://andrii-butenko-portfolio.vercel.app"),

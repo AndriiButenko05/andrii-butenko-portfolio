@@ -36,7 +36,7 @@ const techLogos: LogoItem[] = [
   { node: <SiCss />, title: "CSS" },
   { node: <SiSass />, title: "SASS" },
   { node: <SiNodedotjs />, title: "Node.js" },
-  { node: <SiNestjs />, title: "Nest.js" },
+  { node: <SiNestjs />, title: "NestJS" },
   { node: <SiSpringboot />, title: "Spring Boot" },
   { node: <SiVite />, title: "Vite" },
   { node: <SiCloudflare />, title: "Cloudflare" },

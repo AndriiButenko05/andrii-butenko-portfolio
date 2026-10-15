@@ -12,10 +12,10 @@
         "Tailwind CSS",
         "HTML5 / CSS / SASS",
         "MUI",
-        "Swiper",
-        "i18next"
+        "Swiper"
       ],
       "extra": [
+        "i18n / localization (i18next)",
         "Performance optimization",
         "Responsive design",
         "Accessibility"
@@ -57,7 +57,7 @@
     {
       "id": 4,
       "label": "Backend",
-      "items": ["Node.js", "Nest.js", "MongoDB", "REST API"],
+      "items": ["Node.js", "NestJS", "TypeORM / MySQL", "REST API", "JWT auth"],
       "extra": ["Java / Spring Boot (working knowledge)"]
     }
   ]
