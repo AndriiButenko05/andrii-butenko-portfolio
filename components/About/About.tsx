@@ -30,8 +30,8 @@ export default function About() {
           </h2>
           <p>
             Focus on performance, localization, accessibility and CI quality;
-            comfortable making backend changes in Nest.js and Spring Boot when
-            a feature needs them.
+            comfortable making backend changes in Nest.js and Spring Boot when a
+            feature needs them.
           </p>
           <p>Based in Wrocław, open to remote.</p>
           <p className={css["core-stack"]}>
@@ -45,7 +45,7 @@ export default function About() {
                 <h3>{group.label}</h3>
                 <p>
                   {group.items.join(", ")}
-                  {group.extra && `; ${group.extra.join(", ")}`}
+                  {group.extra && `, ${group.extra.join(", ")}`}
                 </p>
               </div>
             ))}

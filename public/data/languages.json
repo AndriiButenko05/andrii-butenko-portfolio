@@ -2,7 +2,7 @@
   "languages": [
     { "id": 1, "name": "Ukrainian", "level": "Native" },
     { "id": 2, "name": "Russian", "level": "Fluent" },
-    { "id": 3, "name": "English", "level": "C1" },
+    { "id": 3, "name": "English", "level": "Advanced" },
     { "id": 4, "name": "Polish", "level": "Intermediate" }
   ]
 }
